@@ -1,0 +1,31 @@
+.margin {
+    margin-left: 9px;
+    margin-right: 9px;
+}
+.icon-actions {
+    font-size: 23px;
+}
+.checkbox {
+    vertical-align: middle;
+}
+.actions {
+    float: right;
+}
+.item-text-wrap {
+    overflow: auto;
+}
+.ion-checkmark-circled.icon-actions.margin{
+	margin-right: 35px;
+}
+
+.Personal {
+background-color:#4CAF50;
+}
+
+.Professional {
+background-color: #03A9F4;
+}
+
+.Spiritual{
+background-color: #CDDC39;
+}

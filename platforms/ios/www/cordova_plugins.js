@@ -34,6 +34,13 @@ module.exports = [
         "clobbers": [
             "navigator.splashscreen"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+        "id": "cordova-plugin-x-socialsharing.SocialSharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -42,7 +49,8 @@ module.exports.metadata =
     "com.ionic.keyboard": "1.0.4",
     "cordova-plugin-console": "1.0.1",
     "cordova-plugin-device": "1.0.1",
-    "cordova-plugin-splashscreen": "2.1.0"
+    "cordova-plugin-splashscreen": "2.1.0",
+    "cordova-plugin-x-socialsharing": "5.0.3"
 }
 // BOTTOM OF METADATA
 });

@@ -1,0 +1,38 @@
+<ion-header-bar class="bar-calm">
+   <button class="button button-clear" ng-click="newTask()">New</button>
+   <h1 class="title">My Bucket List</h1>
+   <button class="button button-clear" ng-click="logout()">Logout</button>
+</ion-header-bar>
+
+<ion-content class="has-header padding" has-tabs="true" on-refresh="onRefresh()">
+   <div class="card" ng-repeat="item in list" id="{{item.key}}" >
+     <div class="item item-divider {{item.type}}">
+    {{ item.type }}
+  </div>
+      <div class="item item-text-wrap">
+         <span>
+         {{ item.item }}
+         </span>
+         <br/>
+         <br/>
+         <div ng-controller="SocialCtrl">
+         <button class="button" ng-click="shareAnywhere()">Do it right</button></div>
+         <br/>
+         <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="#">
+      <i class="icon ion-checkmark-circled" ng-click="markCompleted('{{item.key}}')"></i>Completed</a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-clipboard" ng-click="markMissed('{{item.key}}')"></i>Missed</a>
+    <a class="tab-item" href="#">
+    <i class="icon ion-trash-b" ng-click="deleteItem('{{item.key}}')"></i>Delete</a>
+  </div>
+      </div>
+   </div>
+   <div class="card" >
+      <div class="item item-text-wrap" ng-show="noData">
+         <span>
+         No Items in your bucket List. Click  <a href="javascript:" ng-click="newTask()">Here</a> and create one
+         </span>
+      </div>
+   </div>
+</ion-content>
